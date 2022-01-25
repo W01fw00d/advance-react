@@ -1,13 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
-import ClassComponent from "./components/atoms/ClassComponent";
+// import ClassComponent from "./components/atoms/ClassComponent";
+import UseStateForm from "./components/atoms/UseStateForm";
 
 function App() {
   return (
     <div className="App">
-      <ClassComponent name="Gabriel" />
+      {/* <ClassComponent name="Gabriel" /> */}
+      <UseStateForm />
     </div>
   );
 }

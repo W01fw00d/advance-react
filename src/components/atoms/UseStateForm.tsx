@@ -3,7 +3,10 @@ import React, { useState } from "react";
 type State = { inputA?: string; inputB?: string };
 
 function UseStateForm() {
-  const [state, setState] = useState<State>({ inputA: "", inputB: "" });
+  const [state, setState] = useState<State>({
+    inputA: "Value A",
+    inputB: "Value B",
+  });
 
   const onChange = (event: any) => {
     const target = event.target;
@@ -26,15 +29,36 @@ function UseStateForm() {
       ...prevState,
       [target.id]: target.value,
     }));
+  };
 
+  const onSubmit = (event: any) => {
+    event.preventDefault();
     console.log({ "state.inputA": state.inputA, "state.inputB": state.inputB });
   };
 
   return (
-    <div>
-      Input A: <input id="inputA" value={state.inputA} onChange={onChange} />
-      Input B: <input id="inputB" value={state.inputB} onChange={onChange} />
-    </div>
+    <>
+      <h1> Use State Form</h1>
+      <form onSubmit={onSubmit}>
+        <label htmlFor="inputA">Input A:</label>
+        <input
+          id="inputA"
+          name="inputA"
+          value={state.inputA}
+          onChange={onChange}
+        />
+        <br />
+        <label htmlFor="inputB">Input B:</label>
+        <input
+          id="inputB"
+          name="inputB"
+          value={state.inputB}
+          onChange={onChange}
+        />
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </>
   );
 }
 

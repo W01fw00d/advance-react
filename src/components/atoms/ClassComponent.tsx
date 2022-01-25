@@ -19,6 +19,10 @@ class ClassComponent extends React.Component<Props, State> {
     this.timerId = setInterval(() => this.tick(), 1000);
   }
 
+  componentDidUpdate() {
+    console.log("Component Did Update!");
+  }
+
   componentWillUnmount() {
     clearInterval(this.timerId);
   }

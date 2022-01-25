@@ -27,6 +27,8 @@ class ClassComponent extends React.Component<Props, State> {
     clearInterval(this.timerId);
   }
 
+  // There are more lifecycle event functions, but they are not used so much
+
   tick() {
     this.setState({
       date: new Date(),

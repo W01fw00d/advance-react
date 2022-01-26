@@ -2,6 +2,36 @@
 
 Some examples of Advance React concepts
 
+# Implemented
+
+- Old Class Components (lifecycle functions, manage state)
+
+- Functional Components
+
+- Form with useState Hook state management
+
+- Uncontrolled form
+
+# Pending
+
+- Hooks
+
+useReduce for state management
+
+useEffect() - emulate Class Component lifecycle function events
+
+useRef() - save elements or any variable that you need to update but no need to rerender
+
+useMemo()
+
+useCallback()
+
+- Redux for state management
+
+- Formik for controlling the form components state
+
+- Context: Provider and consumer
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

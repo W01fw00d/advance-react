@@ -1,13 +1,17 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
-import ClassComponent from "./components/atoms/ClassComponent";
+// import ClassComponent from "./components/atoms/ClassComponent";
+// import UncontrolledForm from "./components/atoms/UncontrolledForm";
+import UseStateForm from "./components/atoms/UseStateForm";
 
 function App() {
   return (
     <div className="App">
-      <ClassComponent name="Gabriel" />
+      <h1> Some React Concepts examples </h1>
+      {/* <ClassComponent name="Gabriel" /> */}
+      {/* <UncontrolledForm /> */}
+      <UseStateForm />
     </div>
   );
 }

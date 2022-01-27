@@ -6,7 +6,8 @@ import "./App.css";
 // import UseStateForm from "./components/atoms/UseStateForm";
 // import PropsTreePage from "./propsTree/pages/Page";
 // import CompositionTreePage from "./compositionTree/pages/Page";
-import ContextTreePage from "./contextTree/pages/Page";
+// import ContextTreePage from "./contextTree/pages/Page";
+import UseReduceTreePage from "./useReduceTree/pages/Page";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <UseStateForm /> */}
       {/* <PropsTreePage /> */}
       {/* <CompositionTreePage /> */}
-      <ContextTreePage />
+      {/* <ContextTreePage /> */}
+      <UseReduceTreePage />
     </div>
   );
 }

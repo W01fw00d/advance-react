@@ -41,17 +41,12 @@ const flatten = (objectToFlatten, previousKeys = []) =>
         ...flatten(currentValue, currentKeys),
       };
     } else {
-      total[
-        currentKeys
-          .map((key, index) => {
-            if (index !== 0) {
-              return capitalizeFirstLetter(key);
-            }
+      const capitalizeFirstLetterOfWord = (key, index) =>
+        index !== 0 ? capitalizeFirstLetter(key) : key;
 
-            return key;
-          })
-          .join("")
-      ] = currentValue;
+      total[currentKeys.map(capitalizeFirstLetterOfWord).join("")] =
+        currentValue;
+
       return total;
     }
   }, {});

@@ -1,7 +1,5 @@
 import React from "react";
 
-import LabeledInput from "../molecules/LabeledInput";
-
 type Props = {
   inputs: any[];
   onSubmit: React.FormEventHandler<HTMLFormElement>;

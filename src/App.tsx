@@ -4,7 +4,8 @@ import "./App.css";
 // import ClassComponent from "./components/atoms/ClassComponent";
 // import UncontrolledForm from "./components/atoms/UncontrolledForm";
 // import UseStateForm from "./components/atoms/UseStateForm";
-import BasicTreePage from "./basicTree/pages/Page";
+// import PropsTreePage from "./propsTree/pages/Page";
+import CompositionTreePage from "./compositionTree/pages/Page";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <ClassComponent name="Gabriel" /> */}
       {/* <UncontrolledForm /> */}
       {/* <UseStateForm /> */}
-      <BasicTreePage />
+      {/* <PropsTreePage /> */}
+      <CompositionTreePage />
     </div>
   );
 }

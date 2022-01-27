@@ -19,7 +19,7 @@ function Component({
 }: Props) {
   return (
     <>
-      <h1> Basic Tree Form</h1>
+      <h1> Props Tree Form</h1>
       <Form
         stateInputA={stateInputA}
         stateInputB={stateInputB}

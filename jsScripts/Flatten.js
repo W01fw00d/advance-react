@@ -1,5 +1,3 @@
-// TODO: add the upper depth object key to the flattened object, like "userName"
-
 const multipleDepthsObject = {
   user: {
     name: "Pedro",
@@ -8,50 +6,54 @@ const multipleDepthsObject = {
   },
   active: true,
   address: {
-    /* street: {
+    street: {
       name: "Street",
       number: "11",
-    }, */
+    },
     PC: "000000",
   },
   // itemsBought: ["TV", "Box", "Sofa"], // TODO: flatten arrays like "itemsBought1: "TV"
 };
 
-const flatten = (objectToFlatten, previousKey) => {
-  const keys = Object.keys(objectToFlatten);
-  console.log({ keys });
+// Current:
+/* FINAL RESULT: {
+  userName: 'Pedro',
+  userEmail: 'pedro.fake@gmail.com',
+  userAge: '50',
+  active: true,
+  addressStreetName: 'Street',
+  addressStreetNumber: '11',
+  addressPC: '000000'
+} */
 
-  const result = keys.reduce((total, currentKey) => {
-    function capitalizeFirstLetter(string) {
-      return string.charAt(0).toUpperCase() + string.slice(1);
-    }
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-    const combinedCurrentKey = previousKey
-      ? previousKey + capitalizeFirstLetter(currentKey)
-      : currentKey;
-
-    console.log({ total, combinedCurrentKey });
-
+const flatten = (objectToFlatten, previousKeys = []) =>
+  Object.keys(objectToFlatten).reduce((total, currentKey) => {
+    const currentKeys = [...previousKeys, currentKey];
     const currentValue = objectToFlatten[currentKey];
-    console.log({ currentValue });
 
     if (typeof currentValue === "object") {
-      return { ...total, ...flatten(currentValue, currentKey) };
+      return {
+        ...total,
+        ...flatten(currentValue, currentKeys),
+      };
     } else {
-      total[combinedCurrentKey] = currentValue;
+      total[
+        currentKeys
+          .map((key, index) => {
+            if (index !== 0) {
+              return capitalizeFirstLetter(key);
+            }
+
+            return key;
+          })
+          .join("")
+      ] = currentValue;
       return total;
     }
   }, {});
 
-  return result;
-};
-
 console.log("FINAL RESULT:", flatten(multipleDepthsObject));
-
-// Current:
-/* FINAL RESULT: {
-  name: 'Pedro',
-  email: 'pedro.fake@gmail.com',
-  age: '50',
-  active: true
-} */

@@ -14,7 +14,9 @@ Some examples of Advance React concepts and JS
 
 - Tree built using composition and basic tree without composition
 
-- JS: flatten an object, iterate through an object
+- Context: Provider and consumer
+
+- Only JS: flatten an object, iterate through an object
 
 # Pending
 
@@ -34,7 +36,7 @@ useCallback()
 
 - Formik for controlling the form components state
 
-- Context: Provider and consumer
+- Custom Hook - shared state logic between two components
 
 # Getting Started with Create React App
 

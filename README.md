@@ -1,6 +1,6 @@
 # advance-react
 
-Some examples of Advance React concepts
+Some examples of Advance React concepts and JS
 
 # Implemented
 
@@ -13,6 +13,8 @@ Some examples of Advance React concepts
 - Uncontrolled form
 
 - Tree built using composition and basic tree without composition
+
+- JS: flatten an object, iterate through an object
 
 # Pending
 

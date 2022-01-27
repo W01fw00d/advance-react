@@ -1,5 +1,3 @@
-const { resourceLimits } = require("worker_threads");
-
 // TODO: add the upper depth object key to the flattened object, like "userName"
 
 const multipleDepthsObject = {
@@ -8,6 +6,13 @@ const multipleDepthsObject = {
     email: "pedro.fake@gmail.com",
     age: "50",
   },
+  /* address: {
+    street: {
+      name: "Street",
+      number: "11",
+    },
+    PC: "000000",
+  }, */
   active: true,
   // itemsBought: ["TV", "Box", "Sofa"], // TODO: flatten arrays like "itemsBought1: "TV"
 };
@@ -23,12 +28,12 @@ const flatten = (objectToFlatten) => {
     console.log({ currentValue });
 
     if (typeof currentValue === "object") {
-      return total.concat(flatten(currentValue));
+      return { ...total, ...flatten(currentValue) };
     } else {
-      total.push({ [currentKey]: currentValue });
+      total[currentKey] = currentValue;
       return total;
     }
-  }, []);
+  }, {});
 
   return result;
 };
@@ -36,10 +41,9 @@ const flatten = (objectToFlatten) => {
 console.log("FINAL RESULT:", flatten(multipleDepthsObject));
 
 // Current:
-/* FINAL RESULT: [
-    { name: 'Pedro' },
-    { email: 'pedro.fake@gmail.com' },
-    { age: '50' },
-    { active: true }
-  ]
- */
+/* FINAL RESULT: {
+  name: 'Pedro',
+  email: 'pedro.fake@gmail.com',
+  age: '50',
+  active: true
+} */

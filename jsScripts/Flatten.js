@@ -31,6 +31,7 @@ function capitalizeFirstLetter(string) {
 }
 
 const flatten = (objectToFlatten, previousKeys = []) =>
+  // A recursive implementation of a flatten object function using reduce()
   Object.keys(objectToFlatten).reduce((total, currentKey) => {
     const currentKeys = [...previousKeys, currentKey];
     const currentValue = objectToFlatten[currentKey];

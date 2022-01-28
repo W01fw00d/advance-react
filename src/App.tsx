@@ -7,19 +7,21 @@ import "./App.css";
 // import PropsTreePage from "./propsTree/pages/Page";
 // import CompositionTreePage from "./compositionTree/pages/Page";
 // import ContextTreePage from "./contextTree/pages/Page";
-import UseReduceTreePage from "./useReduceTree/pages/Page";
+// import UseReduceTreePage from "./useReduceTree/pages/Page";
+import FullyCentered from "./components/atoms/FullyCentered";
 
 function App() {
   return (
     <div className="App">
-      <h1> Some React Concepts examples </h1>
+      {/* <h1> Some React Concepts examples </h1> */}
       {/* <ClassComponent name="Gabriel" /> */}
       {/* <UncontrolledForm /> */}
       {/* <UseStateForm /> */}
       {/* <PropsTreePage /> */}
       {/* <CompositionTreePage /> */}
       {/* <ContextTreePage /> */}
-      <UseReduceTreePage />
+      {/* <UseReduceTreePage /> */}
+      <FullyCentered />
     </div>
   );
 }

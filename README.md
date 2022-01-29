@@ -16,13 +16,15 @@ Some examples of Advance React concepts and JS
 
 - Context: Provider and consumer
 
-- Only JS: flatten an object, iterate through an object
+- Hooks
+
+useReduce for state management
+
+- Only JS: flatten an object, iterate through an object, and some common exercises
 
 # Pending
 
 - Hooks
-
-useReduce for state management
 
 useEffect() - emulate Class Component lifecycle function events
 
@@ -37,6 +39,10 @@ useCallback()
 - Formik for controlling the form components state
 
 - Custom Hook - shared state logic between two components
+
+- React.createPortal for creating a custom implementation of a Toaster Msg ("Your form was succesfully submitted!") - https://reactjs.org/docs/portals.html
+
+- Only JS: jsScripts/exercises/pipe
 
 # Getting Started with Create React App
 

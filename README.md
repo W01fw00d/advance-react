@@ -18,15 +18,15 @@ Some examples of Advance React concepts and JS
 
 - Hooks
 
-useReduce for state management
+useReduce() for state management
+
+useEffect() - emulate Class Component lifecycle function events
 
 - Only JS: flatten an object, iterate through an object, and some common exercises
 
 # Pending
 
 - Hooks
-
-useEffect() - emulate Class Component lifecycle function events
 
 useRef() - save elements or any variable that you need to update but no need to rerender
 
@@ -41,8 +41,6 @@ useCallback()
 - Custom Hook - shared state logic between two components
 
 - React.createPortal for creating a custom implementation of a Toaster Msg ("Your form was succesfully submitted!") - https://reactjs.org/docs/portals.html
-
-- Only JS: jsScripts/exercises/pipe
 
 # Getting Started with Create React App
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 type State = { inputA?: string; inputB?: string };
 
@@ -7,6 +7,32 @@ function UseStateForm() {
     inputA: "Value A",
     inputB: "Value B",
   });
+
+  useEffect(
+    () => {
+      console.log("This code gets executed when componentDidUpdate");
+      // Will be executed with every component update
+
+      return () => {
+        console.log("This code gets executed when componentDidUnmount");
+        // This block will be executed after unmounting the component.
+        // For example, you can close external connections here
+      };
+    } /* No dependencies array */
+  );
+
+  useEffect(
+    () => {
+      console.log("This code gets executed when componentDidMount");
+      // Will be called once, after component is mounted/rendered
+    },
+    [] /* Empty dependencies array */
+  );
+
+  useEffect(() => {
+    console.log("state has changed: ", state);
+    // This code will be executed only when `state` has changed
+  }, [state]);
 
   const onChange = (event: any) => {
     const target = event.target;

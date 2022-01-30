@@ -27,6 +27,11 @@ class ClassComponent extends React.Component<Props, State> {
     clearInterval(this.timerId);
   }
 
+  shouldComponentUpdate() {
+    return true;
+    // return false; // This will stop rerenders
+  }
+
   // There are more lifecycle event functions, but they are not used so much
 
   tick() {

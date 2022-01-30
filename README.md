@@ -1,4 +1,4 @@
-# advance-react
+# advanced-react
 
 Some examples of Advance React concepts and JS
 
@@ -21,8 +21,6 @@ Some examples of Advance React concepts and JS
 useReduce() for state management
 
 useEffect() - emulate Class Component lifecycle function events
-
-- Only JS: flatten an object, iterate through an object, and some common exercises
 
 # Pending
 

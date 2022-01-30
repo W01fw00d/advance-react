@@ -10,9 +10,6 @@ import UseStateForm from "./components/atoms/UseStateForm";
 // import UseReduceTreePage from "./useReduceTree/pages/Page";
 // import FullyCentered from "./components/atoms/FullyCentered";
 
-// TODO: rename this project as advanced-react, solve typo
-// TODO: Move all jsScripts to an independent project, called advanced-js
-
 function App() {
   return (
     <div className="App">

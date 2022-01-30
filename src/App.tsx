@@ -3,21 +3,29 @@ import "./App.css";
 
 // import ClassComponent from "./components/atoms/ClassComponent";
 // import UncontrolledForm from "./components/atoms/UncontrolledForm";
-// import UseStateForm from "./components/atoms/UseStateForm";
+import UseStateForm from "./components/atoms/UseStateForm";
 // import PropsTreePage from "./propsTree/pages/Page";
 // import CompositionTreePage from "./compositionTree/pages/Page";
-import ContextTreePage from "./contextTree/pages/Page";
+// import ContextTreePage from "./contextTree/pages/Page";
+// import UseReduceTreePage from "./useReduceTree/pages/Page";
+// import FullyCentered from "./components/atoms/FullyCentered";
+
+// TODO: rename this project as advanced-react, solve typo
+// TODO: Move all jsScripts to an independent project, called advanced-js
 
 function App() {
   return (
     <div className="App">
-      <h1> Some React Concepts examples </h1>
+      {/* TODO: add React router here and try to find a way of creating pages dinamically for each example */}
+      {/* <h1> Some React Concepts examples </h1> */}
       {/* <ClassComponent name="Gabriel" /> */}
       {/* <UncontrolledForm /> */}
-      {/* <UseStateForm /> */}
+      <UseStateForm />
       {/* <PropsTreePage /> */}
       {/* <CompositionTreePage /> */}
-      <ContextTreePage />
+      {/* <ContextTreePage /> */}
+      {/* <UseReduceTreePage /> */}
+      {/* <FullyCentered /> */}
     </div>
   );
 }

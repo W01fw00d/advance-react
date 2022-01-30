@@ -1,8 +1,10 @@
+import "./FullyCentered.css";
+
 function FullyCentered() {
   return (
     <div
       style={{
-        // Also needs html, body, #root, .App { height: 100%;}
+        // Also needs html, body, #root, .App { height: 100%;} ; check the css file
         height: "100%",
         display: "flex",
         alignItems: "center",

@@ -7,14 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html,
-body,
-#root,
-.App {
-  /* This full height is used for the src/components/atoms/FullyCentered.tsx example */
-  height: 100%;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
